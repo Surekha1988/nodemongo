@@ -1,0 +1,11 @@
+[
+    {
+        "name":{
+           "firstname":"",
+           "lastname":""
+               },
+               "email":"",
+               "password":"",
+               "gender":1
+    }
+]
