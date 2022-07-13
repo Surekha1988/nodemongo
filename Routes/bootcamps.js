@@ -11,6 +11,8 @@ import {
 } from '../controllers/bootcamps.js'
 
 
+
+
 // routes.get('/',(req,res) => {
 //     // res.send("<h1>Hello from express</h1>")  to saw in postman
 //     // res.sendStatus(400); it shows the bad request in postman
@@ -37,6 +39,9 @@ routes.route('/')
 routes.route('/:id')
       .get(getBootcampsbyId)  
       .put(updatedBootcamps)
-      .delete(deleteBootcamps);   
+      .delete(deleteBootcamps);  
+      
+      
+     
 
 export default routes

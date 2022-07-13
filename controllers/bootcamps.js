@@ -39,7 +39,7 @@ export const getBootcampsbyId = async (req,res,next) => {
     try{
         const bootcamp = await BootcampSchema.findById(id)
         if(!bootcamp){
-            next(new ErrorResponse(`Bootcamp is not found id of ${id}`, 404))
+          return  next(new ErrorResponse(`Bootcamp is not found id of ${id}`, 404))
         }
         res.status(200).json({success: true, data: bootcamp})
         }
@@ -64,7 +64,7 @@ export const updatedBootcamps = async (req,res) => {
             runValidators:true
         })
         if(!bootcamp){
-          return  res.status(400).json({ success: false, msg: `User not updated`})
+            return  next(new ErrorResponse(`Bootcamp user is not updated id of ${id}`, 404))
         }
         res.status(200).json({ success: true, data: bootcamp})
     }

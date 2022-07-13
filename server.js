@@ -4,7 +4,7 @@ import colors from 'colors'
 
 // route files
 
-import routes from './Routes/bootcamps.js'
+import routes from './Routes/index.js'
 import logger from './Middleware/logger.js'
 
 import connectdb from './config/db.js'
@@ -24,7 +24,7 @@ connectdb()
 
 app.use(logger)
 
-app.use('/api/v1/bootcamps', routes)
+app.use('/api/v1', routes)
 
 app.use(errorHandling)
 
